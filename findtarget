@@ -1,0 +1,87 @@
+
+
+--- Tut
+
+local esp_settings = { ---- table for esp settings 
+    textsize = 8,
+    textcolour = 255,255,255
+}
+
+local gui = Instance.new("BillboardGui")
+local esp = Instance.new("TextLabel",gui) ---- new instances to make the billboard gui and the textlabel
+
+
+
+gui.Name = "Cracked esp"; ---- properties of the esp
+gui.ResetOnSpawn = false
+gui.AlwaysOnTop = true;
+gui.LightInfluence = 0;
+gui.Size = UDim2.new(1.75, 0, 1.75, 0);
+esp.BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+esp.Text = ""
+esp.Size = UDim2.new(0.0001, 0.00001, 0.0001, 0.00001);
+esp.BorderSizePixel = 4;
+esp.BorderColor3 = Color3.new(esp_settings.textcolour)
+esp.BorderSizePixel = 0
+esp.Font = "GothamSemibold"
+esp.TextSize = esp_settings.textsize
+esp.TextColor3 = Color3.fromRGB(esp_settings.textcolour) -- text colour
+
+
+
+
+local u = 1
+
+while u > 0 do  
+local success, problem = pcall(function()
+    
+wait(1)
+u = 0
+u = 1
+
+
+local localplr = game.Players.LocalPlayer
+
+local yourcharacter = localplr.Character
+
+local yourface = yourcharacter.Head.face
+
+
+
+for _,player in pairs(game:GetService("Players"):GetPlayers())do
+        if player and player.Character then
+
+        local character = player.Character
+        local face = character.Head.face
+        local tool = localplr.Backpack["Check Target"].PistolPart.SurfaceGui.Phone.FaceColor.FaceImage.Image
+
+
+            if face:IsA("Decal") then-- if it's a validz face, then...
+                if tool == face.Texture then
+                    local targetplayer = face.Parent
+            print(face.Parent)
+
+
+            gui:Clone().Parent = targetplayer
+
+            end
+        end
+    
+
+    end
+end
+
+end)
+
+if success then
+    
+else
+    print(problem)
+end
+
+
+end
+
+
+u = 0
+u = 1

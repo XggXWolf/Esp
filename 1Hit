@@ -1,0 +1,86 @@
+--Framed 1 Hit Hack
+--YT WolfTrainer Official
+
+
+
+-- Checking Hand Cannon
+
+x = 1
+
+while x > 0 do
+    wait()
+
+local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack["Hand Cannon"].Damage.Value = 300
+end)
+
+if success then
+    
+else
+   
+
+--Checking M1911
+    local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack.M1911.Damage.Value = 300
+end)
+
+if success then
+    
+else
+   
+
+--Checking Luger
+
+    local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack.Luger.Damage.Value = 300
+end)
+
+if success then
+    
+else
+
+   
+
+--Checking Mac 10
+    local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack.MAC10.Damage.Value = 300
+end)
+
+if success then
+   
+else
+
+   
+
+--Checking Six Shooter
+
+    local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack["Six Shooter"].Damage.Value = 300
+end)
+
+if success then
+    
+else
+
+    
+
+--Checking Mauser
+
+    local success, problem = pcall(function()
+    game.Players.LocalPlayer.Backpack.Mauser.Damage.Value = 300
+end)
+
+if success then
+    
+else
+
+end
+end
+end
+end
+end
+end
+end
+
+x = 0
+x = 1
