@@ -1,0 +1,56 @@
+	local u = 1
+
+	while u > 0 do  
+		local success, problem = pcall(function()
+
+			wait(1)
+			u = 0
+			u = 1
+
+
+			local localplr = game.Players.LocalPlayer
+
+			local yourcharacter = localplr.Character
+
+			local yourface = yourcharacter.Head.face
+
+
+
+			for _,player in pairs(game:GetService("Players"):GetPlayers())do
+				if player and player.Character then
+
+					local character = player.Character
+					local face = character.Head.face
+					local tool = localplr.Backpack["Check Target"].PistolPart.SurfaceGui.Phone.FaceColor.FaceImage.Image
+
+
+					if face:IsA("Decal") then-- if it's a validz face, then...
+						if tool == face.Texture then
+							local targetplayer = face.Parent.Parent.Name
+							print(targetplayer)
+
+
+							Target.Text = targetplayer
+							
+
+						end
+					end
+
+
+				end
+			end
+
+		end)
+
+		if success then
+
+		else
+
+		end
+
+
+	end
+
+
+	u = 0
+	u = 1
